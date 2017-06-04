@@ -1,21 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-addNewPost: false,
+addNewComment: false,
   actions: {
     postFormShow() {
-      this.set('addNewPost', true);
+      this.set('addNewComment', true);
     },
 
-    savePost1() {
+    saveComment1() {
       var params = {
-        title: this.get('title'),
         content: this.get('content'),
         author: this.get('author'),
-        detail: this.get('detail')
       };
-      this.set('addNewPost', false);
-      this.sendAction('savePost2', params);
+      this.set('addNewComment', false);
+      this.sendAction('saveComment2', params);
+      this.transitionTo('post')
     }
   }
 });

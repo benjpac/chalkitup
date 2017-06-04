@@ -1,4 +1,14 @@
-<h3>{{model.content}}</h3>
-<h5>Asked by {{model.author}} on {{moment-format post.created 'L'}}</h5>
-<br>
-<p>{{model.detail}}</p>
+<div class="well green-background">
+    <h3><strong>{{model.content}}</strong></h3>
+    <p><small>Asked by {{model.author}} on {{moment-format post.created 'L'}}</small></p>
+    <br>
+    <p>{{model.detail}}</p>
+</div>
+
+{{new-comment post=model saveComment2="saveComment3"}}
+
+<div class="well">
+    {{#each post.comments as |comment|}}
+        {{comment-tile comment=comment}}
+    {{/each}}
+</div>
