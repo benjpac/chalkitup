@@ -12,6 +12,7 @@ addNewPost: false,
         title: this.get('title'),
         content: this.get('content'),
         author: this.get('author'),
+        role: this.get('role'),
         detail: this.get('detail')
       };
       this.set('addNewPost', false);

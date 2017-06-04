@@ -5,10 +5,10 @@
     <p>{{model.detail}}</p>
 </div>
 
-{{new-comment post=model saveComment2="saveComment3"}}
+{{new-comment post=model saveComment="saveComment"}}
 
-<div class="well">
-    {{#each post.comments as |comment|}}
+{{#if model.comments}}
+    {{#each model.comments as |comment|}}
         {{comment-tile comment=comment}}
     {{/each}}
-</div>
+{{/if}}

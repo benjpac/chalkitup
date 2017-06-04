@@ -15,3 +15,8 @@
 .author {
     font-size: 75%;
 }
+
+.comment {
+    background-color: #dbddd7;
+    border: 1px solid #d6e9c6;
+}

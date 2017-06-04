@@ -7,14 +7,16 @@ addNewComment: false,
       this.set('addNewComment', true);
     },
 
-    saveComment1() {
+    saveComment() {
+      debugger;
       var params = {
         content: this.get('content'),
         author: this.get('author'),
+        role: this.get('role'),
+        post: this.get('post')
       };
       this.set('addNewComment', false);
-      this.sendAction('saveComment2', params);
-      this.transitionTo('post')
+      this.sendAction('saveComment', params);
     }
   }
 });
