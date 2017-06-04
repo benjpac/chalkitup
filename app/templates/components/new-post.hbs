@@ -1,15 +1,21 @@
 {{#if addNewPost}}
   <h3>What is your question?</h3>
+  <br>
   <div>
     <form>
       <div class="form-group">
         <label for="author">Your name</label>
-        {{input value=author class="form-control" id="author"}}
+        {{input value=author class="form-control" id="author" placeholder="John Smith"}}
       </div>
 
       <div class="form-group">
         <label for="content">Question</label>
-        {{input value=content class="form-control" id="content"}}
+        {{input value=content class="form-control" id="content" placeholder="What's the best tool for web styling?"}}
+      </div>
+
+      <div class="form-group">
+        <label for="detail">Question</label>
+        {{textarea rows="8" cols="50" class="form-control" id="content" value=content placeholder="Add additional question details here"}}
       </div>
 
       <button {{action 'savePost1'}} class="btn btn-success">Ask Question</button>

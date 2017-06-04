@@ -3,6 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   content: DS.attr(),
   author: DS.attr(),
+  detail: DS.attr(),
   created: DS.attr({
     defaultValue(){
       return new Date();
