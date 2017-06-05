@@ -1,7 +1,18 @@
 # chalkitup
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Crowd Sourced, Reddit/Quora Style Message Board for Senior Developers & Tech Pros
+
+Your goal is to create a question and answer message board, similar to Reddit, Quora, StackOverflow or other such sites. Users should be able to submit a question, then other users can respond with answers.
+
+The message board should allow junior developers and newbies learning to code to ask questions that senior developers, product owners, senior designers, recruiters, and other tech professionals can answer.
+
+You're welcome to further refine the audience your specific message board serves, too. (For example, your message board's community could focus on: Students who have less than a year experience, tech pros who are people of color, LGBTQ, rural coders, Portland or Seattle area only, students over the age of 40, those learning specific languages or technologies, etc.)
+
+## To Be Completed Later
+
+* Update About and Contact links, or remove them in favor of something else
+* Add user auth with profile creation
+* Add upvoting on answers, (and questions?) to determine the most popular answer
 
 ## Prerequisites
 
