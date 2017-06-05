@@ -16,6 +16,15 @@
     font-size: 75%;
 }
 
+.red-link {
+    color: red;
+    cursor:pointer;
+}
+
+.red-link:hover  {
+    color: darkred;
+}
+
 .comment {
     background-color: #dbddd7;
     border: 1px solid #d6e9c6;

@@ -1,8 +1,10 @@
 <div class="well green-background">
     <h3><strong>{{model.content}}</strong></h3>
-    <p><small>Asked by {{model.author}} on {{moment-format post.created 'L'}}</small></p>
+    <p><small>Asked by {{model.author}}, {{model.role}} on {{moment-format post.created 'L'}}</small></p>
     <br>
     <p>{{model.detail}}</p>
+    <br>
+    {{edit-post post=model updatePost="updatePost" deletePost="deletePost"}}
 </div>
 
 {{new-comment post=model saveComment="saveComment"}}

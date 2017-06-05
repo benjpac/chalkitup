@@ -1,4 +1,6 @@
 <div class="well">
     <p>{{comment.content}}</p>
     <p class="author">Answered by {{comment.author}}, {{comment.role}} on {{moment-format comment.created 'L'}}</p>
+    <br>
+    {{edit-comment comment=comment updateComment="updateComment" deleteComment="deleteComment"}}
 </div>

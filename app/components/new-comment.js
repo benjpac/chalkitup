@@ -7,7 +7,7 @@ addNewComment: false,
       this.set('addNewComment', true);
     },
 
-    saveComment() {
+    saveComment() { 
       var params = {
         content: this.get('content'),
         author: this.get('author'),

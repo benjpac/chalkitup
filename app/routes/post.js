@@ -5,24 +5,24 @@ model(params) {
     return this.store.findRecord('post', params.post_id);
   },
   actions: {
-    // update(post, params) {
-    //   Object.keys(params).forEach(function(key) {
-    //     if(params[key]!==undefined) {
-    //       post.set(key,params[key]);
-    //     }
-    //   });
-    //   post.save();
-    //   this.transitionTo('index');
-    // },
-    // destroyPost(post) {
-    //   var review_deletions = post.get('comments').map(function(review) {
-    //     return review.destroyRecord();
-    //   });
-    //   Ember.RSVP.all(review_deletions).then(function() {
-    //     return post.destroyRecord();
-    //   });
-    //   this.transitionTo('index');
-    // },
+    updatePost(post, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          post.set(key,params[key]);
+        }
+      });
+      post.save();
+      this.transitionTo('index');
+    },
+    deletePost(post) {
+      var comment_deletions = post.get('comments').map(function(comment) {
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(comment_deletions).then(function() {
+        return post.destroyRecord();
+      });
+      this.transitionTo('index');
+    },
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);
       var post = params.post;
@@ -32,9 +32,5 @@ model(params) {
       });
     //   this.transitionTo('post', post);
     },
-    // destroyComment(review) {
-    //   review.destroyRecord();
-    //   this.transitionTo('index');
-    // }
   }    
 });

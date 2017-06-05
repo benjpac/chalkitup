@@ -1,31 +1,30 @@
 {{#if editPost}}
-  <h3>What is your question?</h3>
-  <br>
   <div>
     <form>
       <div class="form-group">
         <label for="author">Your name</label>
-        {{input value=author class="form-control" id="author" placeholder="John Smith"}}
+        {{input value=author class="form-control" id="author" placeholder=post.author}}
       </div>
       
       <div class="form-group">
           <label for="role">Your job / background</label>
-          {{input value=role class="form-control" id="role" placeholder="Web Developer"}}
+          {{input value=role class="form-control" id="role" placeholder=post.role}}
       </div>
 
       <div class="form-group">
         <label for="content">Question</label>
-        {{input value=content class="form-control" id="content" placeholder="What's the best tool for web styling?"}}
+        {{input value=content class="form-control" id="content" placeholder=post.content}}
       </div>
 
       <div class="form-group">
-        <label for="detail">Question</label>
-        {{textarea rows="8" cols="50" class="form-control" id="detail" value=detail placeholder="Add additional question details here"}}
+        <label for="detail">Additional details (optional)</label>
+        {{textarea rows="8" cols="50" class="form-control" id="detail" value=detail placeholder=post.detail}}
       </div>
 
-      <button {{action 'savePost1'}} class="btn btn-success">Ask Question</button>
+      <button {{action 'updatePost' post}} class="btn btn-warning">Edit Question</button>
+      <button {{action "deletePost" post}} class="btn btn-danger">Delete Question</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'editPostFormShow' post}} class="btn btn-success">Ask Question</button>
+  <p {{action 'editPostFormShow'}} class="author red-link">Edit Question</p>
 {{/if}}

@@ -6,6 +6,7 @@ actions: {
       this.set('editPost', true)
     },
     updatePost(post) {
+      debugger;
       var params = {
         title: this.get('title'),
         content: this.get('content'),
@@ -13,12 +14,12 @@ actions: {
         role: this.get('role'),
       };
       this.set('editPost', false);
-      this.sendAction('updatePost', params);
+      this.sendAction('updatePost', post, params);
     },
-    // deletePost(post) {
-    //   if (confirm('Are you sure you want to delete this post?')) {
-    //     this.sendAction('deletePost', post);
-    //   }
-    // }
+    deletePost(post) {
+      if (confirm('Are you sure you want to delete this post?')) {
+        this.sendAction('deletePost', post);
+      }
+    }
   }
 });

@@ -5,20 +5,20 @@ export default Ember.Component.extend({
     editCommentFormShow() {
       this.set('editComment', true)
     },
-    updateComment(answerForQuestion) {
+    updateComment(comment) {
+      debugger;
       var params = {
         content: this.get('content'),
         author: this.get('author'),
         role: this.get('role'),
-        post: this.get('post')
       };
       this.set('editComment', false);
-      this.sendAction('updateComment', post, params);
+      this.sendAction('updateComment', comment, params);
     },
-    // deleteComment(comment) {
-    //   if (confirm('Are you sure you want to delete this answer?')) {
-    //     this.sendAction('deleteComment', comment);
-    //   }
-    // }
+    deleteComment(comment) {
+      if (confirm('Are you sure you want to delete this answer?')) {
+        this.sendAction('deleteComment', comment);
+      }
+    }
   }
 });
