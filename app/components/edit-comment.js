@@ -6,7 +6,6 @@ export default Ember.Component.extend({
       this.set('editComment', true)
     },
     updateComment(comment) {
-      debugger;
       var params = {
         content: this.get('content'),
         author: this.get('author'),
