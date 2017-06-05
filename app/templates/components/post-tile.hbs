@@ -9,7 +9,7 @@
                 <p class="author">Answered by John Smith on 06/03/2017</p>
             </li>
             <li class="list-group-item">
-                <span class="badge pull-left">14</span>
+                <span class="badge pull-left">{{post.comments.length}}</span>
                 {{#link-to 'post' post.id}}<span class="margin-left">See more answers</span>{{/link-to}}         
             </li>
         </ul>

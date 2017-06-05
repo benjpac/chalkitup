@@ -8,7 +8,6 @@ addNewComment: false,
     },
 
     saveComment() {
-      debugger;
       var params = {
         content: this.get('content'),
         author: this.get('author'),

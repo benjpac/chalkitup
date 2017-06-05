@@ -19,6 +19,7 @@
             <button {{action 'saveComment'}} class="btn btn-success">Answer Question</button>
         </form>
     {{else}}
-        <button {{action 'postFormShow'}} class="btn btn-success">Answer Question</button>
+        <button {{action 'postFormShow' post}} class="btn btn-success">Answer Question</button>
+        {{edit-comment post=post updateAnswer="updateAnswer"}}
     {{/if}}
 </div>
