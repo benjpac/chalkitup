@@ -6,7 +6,6 @@ actions: {
       this.set('editPost', true)
     },
     updatePost(post) {
-      debugger;
       var params = {
         title: this.get('title'),
         content: this.get('content'),
