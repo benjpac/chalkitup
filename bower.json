@@ -1,0 +1,14 @@
+{
+  "name": "chalkitup",
+  "description": "Small description for chalkitup goes here",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/benjpac/chalkitup",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

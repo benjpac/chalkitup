@@ -18,11 +18,10 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: 'AIzaSyBbcG1CDYXhnytZUPTkCn-h_60TOWiNteA', 
-      authDomain: 'chalkitup-293ca.firebaseapp.com', 
-      databaseURL: 'https://chalkitup-293ca.firebaseio.com', 
+      apiKey: 'AIzaSyBbcG1CDYXhnytZUPTkCn-h_60TOWiNteA',
+      authDomain: 'chalkitup-293ca.firebaseapp.com',
+      databaseURL: 'https://chalkitup-293ca.firebaseio.com',
       storageBucket: 'chalkitup-293ca.appspot.com', 
-      deployToken: '1/YVf9cmlJ7D35tampcKLjYB-E4J-ISEfqshCKcRigv-0'
     },
 
 
