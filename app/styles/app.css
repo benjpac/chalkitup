@@ -1,5 +1,12 @@
-#green {
+#logo {
     color: #5cb85c;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 200%;
+}
+
+.split-to-sides {
+    display: flex;
+    justify-content: space-between;
 }
 
 .green-background {
