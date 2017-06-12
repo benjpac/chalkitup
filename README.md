@@ -8,6 +8,29 @@ The message board should allow junior developers and newbies learning to code to
 
 You're welcome to further refine the audience your specific message board serves, too. (For example, your message board's community could focus on: Students who have less than a year experience, tech pros who are people of color, LGBTQ, rural coders, Portland or Seattle area only, students over the age of 40, those learning specific languages or technologies, etc.)
 
+## Planning
+
+1. Configuration/dependencies
+  * Git; required to clone project locally
+  * NodeJS; required to run ember and associated dependencies
+
+2. Specs
+  * Spec 1: Click "Ask Question" > opens question form > Fill in name, job, additional details > save button > new question is displayed
+  * Spec 2: Click "See more answers" > all answers for question are displayed > click "Answer question" > fill in answer, name, job > save button > answer is displayed
+
+3. Integration
+  * Index page contains post component, which displays all posts
+  * Index page contains new-post component, for creating a new post
+  * Post component contains edit-post component, for editing post
+  * Post component contains comment component, for viewing all comments associated with post
+  * Comment component contains edit-comment component, for editing component
+
+4. UX/UI
+  * Use bootstrap to make web app professional / portfolio ready
+
+5. Polish
+  * Add icons using font-awesome to improve UX/UI
+
 ## To Be Completed Later
 
 * Update About and Contact links, or remove them in favor of something else
